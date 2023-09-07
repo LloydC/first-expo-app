@@ -6,7 +6,6 @@ import ExploreScreen from '../screens/ExploreScreen';
 import BookmarkScreen from '../screens/BookmarkScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 
-
 const Tab = createMaterialBottomTabNavigator();
 
 function RootStackNavigator() {

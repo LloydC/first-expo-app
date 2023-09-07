@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, Button } from 'react-native';
 // import { Text, BottomNavigation } from 'react-native-paper';
 // import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -26,6 +26,13 @@ function HomeScreen({ navigation }) {
     }}
     >
       <Text>Home Screen</Text>
+      <Button
+        title="Go to Profile"
+        onPress={() => {
+          /* 1. Navigate to the Profile route with params */
+          navigation.navigate('Profile');
+        }}
+      />
     </View>
   );
 }

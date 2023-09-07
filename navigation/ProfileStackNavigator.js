@@ -4,7 +4,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import HomeScreen from '../screens/HomeScreen';
 import ExploreScreen from '../screens/ExploreScreen';
 import ProfileScreen from '../screens/ProfileScreen';
-
+import BookmarkScreen from '../screens/BookmarkScreen';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -20,7 +20,7 @@ function ProfileStackNavigator() {
               // also name="near-me" or name="map-search"
         ),
       }} />
-      <Tab.Screen name="Bookmarks" component={BookmarkScreen} options={{tarBarLabel: 'Bookmarks',tabBarIcon: ({ color })=> (
+      <Tab.Screen name="Bookmarks" component={BookmarkScreen} options={{tarBarLabel: 'Bookmarks', tabBarIcon: ({ color })=> (
         <MaterialCommunityIcons  name="heart-outline" color={color} size={26} />
       ) }} />
     <Tab.Screen name="Profile" component={ProfileScreen} options={{tarBarLabel: 'Profile',tabBarIcon: ({ color })=> (

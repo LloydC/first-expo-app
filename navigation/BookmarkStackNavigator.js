@@ -4,7 +4,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import HomeScreen from '../screens/HomeScreen';
 import ExploreScreen from '../screens/ExploreScreen';
 import ProfileScreen from '../screens/ProfileScreen';
-
+import BookmarkScreen from '../screens/BookmarkScreen';
 
 const Tab = createMaterialBottomTabNavigator();
 
