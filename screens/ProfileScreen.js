@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { View, Button, Image, Text, TextInput, TouchableHighlight, StyleSheet } from 'react-native';
-import avatarImg from '../assets/mock-image.png'
+import avatarImg from '../assets/mock-image.png';
 
 function ProfileScreen({ navigation }) {
   const [user, setUser] = useState({
@@ -19,7 +19,7 @@ function ProfileScreen({ navigation }) {
       // justifyContent: 'center'
     },
     primaryTitleText: {
-      fontSize: 30,
+      fontSize: 25,
       fontWeight: 'bold',
       marginTop: 10
     },
