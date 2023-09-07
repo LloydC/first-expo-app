@@ -8,7 +8,7 @@ import ProfileScreen from '../screens/ProfileScreen';
 
 const Tab = createMaterialBottomTabNavigator();
 
-function ExploreStackNavigator() {
+function BookmarkStackNavigator() {
   return (
     <Tab.Navigator barStyle={{ backgroundColor: 'grey', color: 'white' }}>
     <Tab.Screen name="HomePage" component={HomeScreen} options={{tabBarLabel: 'Home', tabBarIcon: ({ color }) => (
@@ -30,4 +30,4 @@ function ExploreStackNavigator() {
   );
 }
 
-export default ExploreStackNavigator;
+export default BookmarkStackNavigator;

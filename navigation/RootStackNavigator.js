@@ -3,6 +3,7 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import HomeScreen from '../screens/HomeScreen';
 import ExploreScreen from '../screens/ExploreScreen';
+import BookmarkScreen from '../screens/BookmarkScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 
 
@@ -16,11 +17,15 @@ function RootStackNavigator() {
           ),
         }}/>
         <Tab.Screen name="ExplorePage" component={ExploreScreen} options={{tabBarLabel: 'Explore', tabBarIcon: ({ color }) => (
-                <MaterialCommunityIcons name="chat" color={color} size={26} /> 
+                <MaterialCommunityIcons name="map-outline" color={color} size={26} /> 
+                // also name="near-me" or name="map-search"
           ),
         }} />
-      <Tab.Screen name="ProfilePage" component={ProfileScreen} options={{tarBarLabel: 'Profile',tabBarIcon: ({ color })=> (
-          <MaterialCommunityIcons  name="cog" color={color} size={26} />
+        <Tab.Screen name="Bookmarks" component={BookmarkScreen} options={{tarBarLabel: 'Bookmarks',tabBarIcon: ({ color })=> (
+          <MaterialCommunityIcons  name="heart-outline" color={color} size={26} />
+        ) }} />
+      <Tab.Screen name="Profile" component={ProfileScreen} options={{tarBarLabel: 'Profile',tabBarIcon: ({ color })=> (
+          <MaterialCommunityIcons  name="account" color={color} size={26} />
         ) }} />
     </Tab.Navigator>
   );
