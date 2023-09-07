@@ -11,9 +11,9 @@ export default function App() {
   return (
     <NavigationContainer>
       <Root.Navigator>
-        <Root.Screen name='Home' component={RootStackNavigator}/>
-        <Root.Screen name='Explore' component={ExploreStackNavigator} />
-        <Root.Screen name='Profile' component={ProfileStackNavigator}/>
+        <Root.Screen name='Home' component={RootStackNavigator} options={{ title: 'Home' }}/>
+        <Root.Screen name='Explore' component={ExploreStackNavigator} options={{ title: 'Explore' }} />
+        <Root.Screen name='Profile' component={ProfileStackNavigator} options={{ title: 'Profile' }}/>
       </Root.Navigator>
     </NavigationContainer>
   );
