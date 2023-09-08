@@ -1,6 +1,8 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
+import Discount from '../components/Discount';
 import avatarImg from '../assets/mock-image.png';
+
 function HomeScreen({ navigation }) {
   const [user, setUser] = useState({
     id: '1',
@@ -11,26 +13,29 @@ function HomeScreen({ navigation }) {
   })
 
   const [discounts, setDiscounts] = useState([{
-    name: '',
-    discountPercentage: '',
-    startDate: '',
-    endDate: '',
-    startTime: '',
-    endTime: '',
+    id: '987urrhr82430832',
+    name: 'Check',
+    discountPercentage: '87%',
+    startDate: '2023-09-09',
+    endDate: '2023-09-16',
+    startTime: '10:00:00',
+    endTime: '18:00:00',
     product: {
-      name: '',
-      description: '',
-      price: '',
-      category: '',
-      quantity: 0,
+      name: 'Check scooter',
+      description: 'Electric scooter',
+      price: '39.60',
+      category: 'Cars and Motorcycles',
+      image: 'https://images.unsplash.com/photo-1665937124595-21fda56e95e3',
+      quantity: 5000,
       shop: {
-        name: '',
+        name: 'Check Technologies B.V',
+        industry: 'Technology',
         address: '',
         postCode: '',
-        city: '',
-        country: '',
-        longitude: 0,
-        latitude: 0,
+        city: 'Amsterdam',
+        country: 'Netherlands',
+        longitude: 52.36,
+        latitude: 4.90,
         openingHours: ''
       }
     }
@@ -65,6 +70,9 @@ function HomeScreen({ navigation }) {
       <Text style={styles.primaryTitleText}>Good morning {user.firstName} {user.lastName}!</Text>
       <Text style={styles.temperatureText}>It's 25 degrees in Amsterdam ☀️</Text>
       <Text style={styles.primaryTitleText}>Nearby discounts 📌</Text>
+      {discounts.map(discount => {
+        return <Discount key={discount.id} discount={discount} />
+      })}
       <Button
         title="Go to Profile"
         onPress={() => {
